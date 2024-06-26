@@ -40,11 +40,12 @@ set "TestToolX64Path=UMHTestTool\Titanium"
 
 "%SevenZipPath%" e "%ExtractTempPath%\%ZipFileX64%" -o"%ExtractToPath%" "%BinX64Path%\*" -aoa
 "%SevenZipPath%" e "%ExtractTempPath%\%ZipFileX64%" -o"%ExtractToPath%" "%SymX64Path%\*" -aoa
-"%SevenZipPath%" e "%ExtractTempPath%\%ZipFileWin32%" -o"%ExtractToPath%" "%BinWin32Path%\tmmon.dll" -aoa
-"%SevenZipPath%" e "%ExtractTempPath%\%ZipFileWin32%" -o"%ExtractToPath%" "%SymWin32Path%\tmmon.pdb" -aoa
 "%SevenZipPath%" e "%ExtractTempPath%\%ZipFileX64%" -o"%ExtractToPath%" "%AdapterX64Path%\*" -aoa
 "%SevenZipPath%" e "%ExtractTempPath%\%ZipFileX64%" -o"%ExtractToPath%" "%AdapterSymX64Path%\*" -aoa
-"%SevenZipPath%" e "%ExtractTempPath%\%ZipFileWin32%" -o"%ExtractToPath%" "%TestToolX64Path%\*" -aoa
+"%SevenZipPath%" e "%ExtractTempPath%\%ZipFileX64%" -o"%ExtractToPath%" "%TestToolX64Path%\*" -aoa
+
+"%SevenZipPath%" e "%ExtractTempPath%\%ZipFileWin32%" -o"%ExtractToPath%" "%BinWin32Path%\tmmon.dll" -aoa
+"%SevenZipPath%" e "%ExtractTempPath%\%ZipFileWin32%" -o"%ExtractToPath%" "%SymWin32Path%\tmmon.pdb" -aoa
 
 echo Cleaning up temporary files: %ZipFileX64% and %ZipFileWin32%
 del "%ExtractTempPath%\%ZipFileX64%"
