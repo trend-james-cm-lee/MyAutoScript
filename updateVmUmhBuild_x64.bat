@@ -37,6 +37,11 @@ copy /y "%UmhBuildX64Path%\TmUmEvt64.pdb" "%VmUmhSymPathX64%\TmUmEvt64.pdb"
 copy /y "%UmhBuildX64Path%\TmUmEvt.dll" "%VmUmhPathX64%\Addon\TmUmEvt.dll"
 copy /y "%UmhBuildX64Path%\TmUmEvt.pdb" "%VmUmhSymPathX64%\TmUmEvt.pdb"
 
+if exist "%UmhBuildX64Path%\UMHTestTool.exe" (
+    copy /y "%UmhBuildX64Path%\UMHTestTool.exe" "%VmUmhPathX64%\UMHTestTool.exe"
+    copy /y "%UmhBuildX64Path%\UMHTestTool.pdb" "%VmUmhSymPathX64%\UMHTestTool.pdb"
+)
+
 echo Done.
 
 endlocal
