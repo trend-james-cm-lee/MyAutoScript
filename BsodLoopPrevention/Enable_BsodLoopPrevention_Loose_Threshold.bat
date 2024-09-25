@@ -22,6 +22,14 @@ set AutoResetSecond="ALSN"
 set AutoResetSecondValue=300
 
 echo.
+echo Add the registry key Parameters if it does not exist
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\tmumh\Parameters" /f
+if %errorLevel% NEQ 0 (
+    echo Failed to add the registry key Parameters
+    pause
+    exit /b 1
+)
+
 echo Set the registry key value %BsodLoopPreventionSwitch% to %BsodLoopPreventionSwitchValue%
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\tmumh\Parameters" /f /v %BsodLoopPreventionSwitch% /t REG_DWORD /d %BsodLoopPreventionSwitchValue%
 echo Set the registry key value %FailureCountThreshold% to %FailureCountThresholdValue%
