@@ -14,8 +14,6 @@ sc stop tmumh
 echo Query the service tmumh
 sc query tmumh
 
-HKLM\SYSTEM\CurrentControlSet\Services\tmumh\RegCfgFlags REG_DWORD 1
-
 set DisableNtTestAlertCheck=1
 
 echo.
