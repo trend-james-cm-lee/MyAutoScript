@@ -28,6 +28,14 @@ if %errorLevel% NEQ 0 (
     exit /b 1
 )
 
+echo Deleting all files in %TESTUMH_DIR%
+del /q /s /f "%TESTUMH_DIR%\*"
+if %errorLevel% NEQ 0 (
+    echo Failed to delete files in %TESTUMH_DIR%
+    pause
+    exit /b 1
+)
+
 echo Done
 
 endlocal

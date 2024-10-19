@@ -10,7 +10,6 @@ if %errorLevel% NEQ 0 (
 )
 
 set TESTUMH_DIR=c:\users\%username%\testUMH
-
 if not exist "%TESTUMH_DIR%" (
     echo %TESTUMH_DIR% not found
     pause
